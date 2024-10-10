@@ -13,15 +13,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  configure:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-  build:
+  build-and-deploy:
     permissions:
       contents: read
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,18 +42,8 @@ jobs:
           name: github-pages
           path: 'build/client'
 
-  deploy:
-    needs:
-      - configure
-      - build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
