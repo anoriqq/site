@@ -1,3 +1,4 @@
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
 	Links,
 	Meta,
@@ -5,9 +6,17 @@ import {
 	Scripts,
 	ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import type { FC, PropsWithChildren } from "react";
 
 import styles from "./root.css?url"
+
+import { Body } from "./components/body";
+import { Html } from "./components/html";
+
+export const meta: MetaFunction = () => [
+	{ title: "Remix" },
+];
+
 
 export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,27 +32,28 @@ export const links: LinksFunction = () => [
 	{ rel: "stylesheet", href: styles },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export const Layout: FC<PropsWithChildren> = ({ children }) => {
 	return (
-		<html lang="en">
+		<Html>
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Meta />
 				<Links />
 			</head>
-			<body>
+			<Body>
 				{children}
 				<ScrollRestoration />
 				<Scripts />
-			</body>
-		</html>
+			</Body>
+		</Html>
 	);
-}
+};
 
-export default function App() {
+const App: FC = () => {
 	return <Outlet />;
-}
+};
+export default App;
 
 export function HydrateFallback() {
 	return <p>Loading...</p>;

@@ -1,20 +1,79 @@
-import { defineConfig } from "@pandacss/dev";
+import {
+	defineConfig,
+	defineGlobalStyles,
+	defineKeyframes,
+	defineSemanticTokens,
+	defineTokens,
+} from "@pandacss/dev";
+
+// https://panda-css.com/docs/theming/tokens#token-types
+const tokens = defineTokens({
+	colors: {},
+	gradients: {},
+	sizes: {
+		full: { value: "100%" },
+	},
+	spacing: {
+		0: { value: "0" },
+	},
+	fonts: {
+		sansserif: { value: "Inter, sans-serif" },
+	},
+	fontSizes: {},
+	fontWeights: {},
+	letterSpacings: {},
+	lineHeights: {},
+	radii: {},
+	borders: {},
+	borderWidths: {},
+	shadows: {},
+	easings: {},
+	opacity: {},
+	blurs: {},
+	zIndex: {},
+	assets: {},
+	durations: {},
+	animations: {},
+	aspectRatios: {},
+	containerNames: {},
+});
+
+const semanticTokens = defineSemanticTokens({});
+
+const keyframes = defineKeyframes({});
+
+const globalCss = defineGlobalStyles({
+	"*, *::before, *::after": {
+		boxSizing: "inherit",
+	},
+});
 
 export default defineConfig({
-  // Whether to use css reset
-  preflight: true,
+	strictTokens: true,
+	strictPropertyValues: true,
+	shorthands: false,
+	jsxFramework: "react",
 
-  // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
+	minify: true,
+	hash: true,
+	lightningcss: true,
 
-  // Files to exclude
-  exclude: [],
+	outdir: "styled-system",
+	include: [
+		"./app/root.tsx",
+		"./app/routes/**/*.{ts,tsx,js,jsx}",
+		"./app/components/**/*.{ts,tsx,js,jsx}",
+	],
+	exclude: [],
 
-  // Useful for theme customization
-  theme: {
-    extend: {},
-  },
+	preflight: true,
+	eject: false,
+	presets: [],
+	theme: {
+		tokens,
+		semanticTokens,
+		keyframes,
+	},
 
-  // The output directory for your css system
-  outdir: "styled-system",
+	globalCss,
 });
