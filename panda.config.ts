@@ -18,6 +18,9 @@ const tokens = defineTokens({
 	},
 	spacing: {
 		0: { value: "0" },
+		xs: { value: "0.25rem" },
+		sm: { value: "0.5rem" },
+		md: { value: "1rem" },
 	},
 	fonts: {
 		sansserif: { value: "Inter, sans-serif" },
