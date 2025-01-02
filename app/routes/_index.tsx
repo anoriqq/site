@@ -23,7 +23,7 @@ export default function Index() {
 			<div>
 				<h1># anoriqq</h1>
 				<br/>
-				shota.yoshikawa[at]anoriqq.com<br/>
+				{"shota.yoshikawa[at]{THIS_DOMAIN}"}<br/>
 				Tokyo, Japan<br/>
 				<br/>
 				<h2>## Link</h2>
