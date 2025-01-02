@@ -11,10 +11,13 @@ export default function Index() {
 		display: "flex",
 		justifyContent: "center",
 		height: "full",
-		"& > div > a": {
-			color: "link",
-			_hover: {
-				textDecoration: "underline",
+		"& > div": {
+			padding: "sm",
+			"& > a": {
+				color: "link",
+				_hover: {
+					textDecoration: "underline",
+				},
 			},
 		},
 	})
