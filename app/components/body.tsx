@@ -8,7 +8,7 @@ export const Body: React.FC<React.PropsWithChildren> = ({ children }) => {
 		lineHeight: "md",
 		color: "text",
 		backgroundColor: "background",
-		fontFamily: "sansserif",
+		fontFamily: "monospace",
 		fontSmoothing: "antialiased",
 	});
 

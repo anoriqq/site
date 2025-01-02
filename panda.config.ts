@@ -8,7 +8,10 @@ import {
 
 // https://panda-css.com/docs/theming/tokens#token-types
 const tokens = defineTokens({
-	colors: {},
+	colors: {
+		blue: { value: "#5FA6FF" },
+		black: { value: "#000" },
+	},
 	gradients: {},
 	sizes: {
 		full: { value: "100%" },
@@ -18,11 +21,14 @@ const tokens = defineTokens({
 	},
 	fonts: {
 		sansserif: { value: "Inter, sans-serif" },
+		monospace: { value: "JetBrains Mono, monospace" },
 	},
 	fontSizes: {},
 	fontWeights: {},
 	letterSpacings: {},
-	lineHeights: {},
+	lineHeights: {
+		md: { value: "1.5" },
+	},
 	radii: {},
 	borders: {},
 	borderWidths: {},
@@ -38,7 +44,12 @@ const tokens = defineTokens({
 	containerNames: {},
 });
 
-const semanticTokens = defineSemanticTokens({});
+const semanticTokens = defineSemanticTokens({
+	colors: {
+		text: { value: "black" },
+		link: { value: "blue" },
+	},
+});
 
 const keyframes = defineKeyframes({});
 
