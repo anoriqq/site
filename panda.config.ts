@@ -18,6 +18,7 @@ const tokens = defineTokens({
 	},
 	fonts: {
 		sansserif: { value: "Inter, sans-serif" },
+		monospace: { value: "JetBrains Mono, monospace" },
 	},
 	fontSizes: {},
 	fontWeights: {},
