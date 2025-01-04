@@ -2,8 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { css } from "styled-system/css";
 
 export const meta: MetaFunction = () => [
-		{ title: "New Remix App" },
-		{ name: "description", content: "Welcome to Remix!" },
+		{ title: "anoriqq" },
 ];
 
 export default function Index() {
