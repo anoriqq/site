@@ -37,9 +37,9 @@ export default function Index() {
 				<br/>
 				<h2>## Work</h2>
 				<br/>
-				- 2022/01-2024/11: クラスター株式会社<br/>
-				- 2020/10-2021/12: クラスター株式会社 (インターン)<br/>
-				- 2018/01-2018/11: 株式会社プレイド (インターン)<br/>
+				- 2022/01-2024/11: <a href="https://corp.cluster.mu/" target="_blank">クラスター株式会社</a><br/>
+				- 2020/10-2021/12: <a href="https://corp.cluster.mu/" target="_blank">クラスター株式会社</a> (インターン)<br/>
+				- 2018/01-2018/11: <a href="https://plaid.co.jp/" target="_blank">株式会社プレイド</a> (インターン)<br/>
 			</div>
 		</div>
 	);
