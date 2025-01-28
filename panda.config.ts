@@ -60,6 +60,12 @@ const globalCss = defineGlobalStyles({
 	"*, *::before, *::after": {
 		boxSizing: "inherit",
 	},
+	"a": {
+		color: "link",
+		_hover: {
+			textDecoration: "underline",
+		},
+	},
 });
 
 export default defineConfig({
