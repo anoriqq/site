@@ -29,6 +29,7 @@ export default function Index() {
 					<li>- <a href="https://x.com/anoriqq">X</a>: プログラミング(仕事)とアニメのつぶやき</li>
 					<li>- <a href="https://mixi.social/@anoriqq">mixi2</a>: 起きてご飯食べて運動する</li>
 					<li>- <a href="https://anoriqq.hateblo.jp">はてなブログ</a>: 頭使って文章を書いたり日記を書いたり</li>
+					<li>- <a href="https://myanimelist.net/animelist/anoriqq?order=4&order2=12&status=1">MyAnimeList</a>: 見てるアニメ</li>
 				</ul>
 				<br/>
 				<h2>## Work</h2>
