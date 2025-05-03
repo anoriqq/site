@@ -35,6 +35,7 @@ export default function Index() {
 				<h2>## Work</h2>
 				<br/>
 				<ul>
+					<li>- 2025/05-Present: <a href="https://www.cyberagent.co.jp/" target="_blank">株式会社サイバーエージェント</a></li>
 					<li>- 2022/01-2024/11: <a href="https://corp.cluster.mu/" target="_blank">クラスター株式会社</a></li>
 					<li>- 2020/10-2021/12: <a href="https://corp.cluster.mu/" target="_blank">クラスター株式会社</a> (インターン)</li>
 					<li>- 2018/01-2018/11: <a href="https://plaid.co.jp/" target="_blank">株式会社プレイド</a> (インターン)</li>
